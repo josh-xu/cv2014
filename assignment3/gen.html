@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sudoku image generator</title>
+    <meta charset="utf-8" />
+    <script type='text/javascript' src='./gen.js'></script>
+    <style>
+#wrapper{text-align:center;}
+#sudoku{
+    display:inline-block;margin-top:180px;
+    font-size: 22px;
+    font-family: "URW Gothic L";
+    border: solid 3px black;
+    border-collapse: collapse;
+}
+td{
+    width: 32px; height: 32px;
+    border-bottom: 2px solid gray;
+    border-right: 2px solid gray;
+}
+td.rightbold{border-right:3px solid black;}
+td.bottombold{border-bottom:3px solid black;}
+td.rightmost{border-right:none;}
+td.bottommost{border-bottom:none;}
+tr {margin:0; padding:0;}
+    </style>
+</head>
+<body>
+<div id='wrapper'>
+    <table id='sudoku'>
+    </table>
+</div>
+<script type='text/javascript'>
+random_sudoku();
+disp_sudoku(false);
+</script>
+</body>
+</html>
